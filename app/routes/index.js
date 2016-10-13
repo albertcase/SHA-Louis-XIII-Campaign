@@ -39,14 +39,14 @@ router.get('/test/:id', function(req, res, next) {
 		.draw(['image over 180,780 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.write("../upload/user"+id+".png", function (errs) {
 		  if (!errs) {
-
+		  	res.setHeader('Content-Type', 'application/json');
+			res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId }));	  
 		  } else {
 		  	//console.log(errs);
 		  }
 		});	
 		
-		res.setHeader('Content-Type', 'application/json');
-		res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId }));	    
+		  
 	});
 	connection.end();
 });
@@ -112,14 +112,15 @@ router.post('/ajax/api/message', function(req, res, next) {
 		.autoOrient()
 		.write("../upload/user_"+id+".png", function (errs) {
 		  if (!errs) {
-
+		  	res.setHeader('Content-Type', 'application/json');
+			res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId, url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result.insertId+".png"}));	    	
 		  } else {
 		  	//console.log(errs);
 		  }
 		});	
 		
-		res.setHeader('Content-Type', 'application/json');
-		res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId, url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result.insertId+".png"}));	    
+		//res.setHeader('Content-Type', 'application/json');
+		//res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId, url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result.insertId+".png"}));	    
 	});
 	connection.end();
 	
