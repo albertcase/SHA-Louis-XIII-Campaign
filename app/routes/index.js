@@ -28,7 +28,7 @@ router.get('/test/:id', function(req, res, next) {
 	    if (err) throw err;
 
 	    var id = result.insertId;
-	    console.log(name.length)
+	    console.log(name.length);
 	    gm('../upload/tu_empty.jpg')
 		.stroke("#ffffff")
 		.font("../upload/simhei.ttf", 70)
@@ -92,12 +92,20 @@ router.post('/ajax/api/message', function(req, res, next) {
 	    if (err) throw err;
 
 	    var id = result.insertId;
-	    gm('../upload/tu_empty.jpg')
+	    if (/.*[\u4e00-\u9fa5]+.*$/.test(name)) {
+			var font = 'simhei';
+			var start = 240-(name.length-1)*40;
+		} else {
+			var font = 'Cresci_LP';
+			var start = 240-(name.length-1)*20;
+		}
+		console.log(font)
+	    gm('../images/tu_empty.jpg')
 		.stroke("#ffffff")
-		.font("../upload/simhei.ttf", 70)
-		.drawText(120, 550, name)
+		.font("../images/"+ font +".ttf", 70)
+		.drawText(start, 550, name)
 		.stroke("#ffffff")
-		.font("../upload/Cresci_LP.ttf", 50)
+		.font("../images/Cresci_LP.ttf", 50)
 		.drawText(150, 620, "No.00001")
 		.draw(['image over 180,780 140,140 "http://10.22.150.121:8080/qrcode-demo/'+ id +'"'])
 		.write("../upload/user_"+id+".png", function (errs) {
