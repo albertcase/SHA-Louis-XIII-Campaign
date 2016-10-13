@@ -19,7 +19,7 @@ router.get('/test/:id', function(req, res, next) {
 	return;
 	}
 	res.send('[connection connect] succeed!');
-	return;
+	//return;
 	});
 
 	var sql = 'INSERT INTO `info`(`name`,`txt`) VALUES(?,?)';
