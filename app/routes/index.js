@@ -66,7 +66,7 @@ router.get('/ajax/api/getmessage', function(req, res, next) {
 	    if (err) throw err;
 
 		res.setHeader('Content-Type', 'application/json');
-		res.send(JSON.stringify({ status: 1, msg: "查询成功", name: result[0].name, txt: result[0].txt, url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result[0].id+".png"}));	 	    
+		res.send(JSON.stringify({ status: 1, msg: "查询成功", name: encodeURIComponent(result[0].name), txt: encodeURIComponent(result[0].txt), url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result[0].id+".png"}));	 	    
 	});
 
 	connection.end();
