@@ -733,7 +733,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 				success		: function (_d)
 				{
 					console.log(_d)
-					if(_d.code=="1")
+					if(_d.status=="1")
 					{
 						uInfo=decodeURIComponent(_d.txt).split(",|,");
 						uName=decodeURIComponent(_d.name);
