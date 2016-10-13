@@ -728,7 +728,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 				dataType	: "json",
 				data:
 				{
-					Param  	: _id
+					id  	: _id
 				},
 				success		: function (_d)
 				{
