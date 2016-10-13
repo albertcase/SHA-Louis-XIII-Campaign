@@ -66,7 +66,7 @@ router.get('/ajax/api/getmessage', function(req, res, next) {
 	    if (err) throw err;
 
 		res.setHeader('Content-Type', 'application/json');
-		res.send(JSON.stringify({ status: 1, msg: "查询成功", name: result[0].name, txt: result[0].txt, url: "http://10.22.150.121:8080/upload/user_"+result[0].id+".png"}));	 	    
+		res.send(JSON.stringify({ status: 1, msg: "查询成功", name: result[0].name, txt: result[0].txt, url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result[0].id+".png"}));	 	    
 	});
 
 	connection.end();
@@ -107,7 +107,7 @@ router.post('/ajax/api/message', function(req, res, next) {
 		.stroke("#ffffff")
 		.font("../images/Cresci_LP.ttf", 50)
 		.drawText(150, 620, "No.00001")
-		.draw(['image over 180,780 140,140 "http://10.22.150.121:8080/qrcode-demo/'+ id +'"'])
+		.draw(['image over 180,780 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.write("../upload/user_"+id+".png", function (errs) {
 		  if (!errs) {
 
@@ -127,7 +127,7 @@ router.get('/qrcode-demo/:id', function(req, res, next) {
 	var id = req.params.id;
 	var qr_image = require('qr-image');
 	//code
-	var temp_qrcode = qr_image.image('http://10.22.150.121:8080/loadinfo/'+id);  
+	var temp_qrcode = qr_image.image('http://louisxiii-cognac.samesamechina.com/loadinfo/'+id);  
     res.type('png');  
     temp_qrcode.pipe(res); 
 });
