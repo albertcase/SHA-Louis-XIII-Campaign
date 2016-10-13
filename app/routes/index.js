@@ -40,7 +40,7 @@ router.get('/test/:id', function(req, res, next) {
 		.write("../upload/user"+id+".png", function (errs) {
 		  if (!errs) {
 		  	res.setHeader('Content-Type', 'application/json');
-			res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId }));	  
+			res.send(JSON.stringify({ status: 1, msg: "保存成功111", "id": result.insertId }));	  
 		  } else {
 		  	//console.log(errs);
 		  }
