@@ -15,11 +15,10 @@ router.get('/test/:id', function(req, res, next) {
 	var connection = mysql.createConnection(dbConfig);
 	connection.connect(function(err){
 	if(err){ 
-	res.send('[query] - :'+err);
+	console.log('[query] - :'+err);
 	return;
 	}
-	res.send('[connection connect] succeed!');
-	//return;
+	console.log('[connection connect] succeed!');
 	});
 
 	var sql = 'INSERT INTO `info`(`name`,`txt`) VALUES(?,?)';
