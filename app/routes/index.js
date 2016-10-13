@@ -29,14 +29,14 @@ router.get('/test/:id', function(req, res, next) {
 
 	    var id = result.insertId;
 	    console.log(name.length);
-	    gm('../upload/tu_empty.jpg')
+	    gm('../images/tu_empty.jpg')
 		.stroke("#ffffff")
-		.font("../upload/simhei.ttf", 70)
+		.font("../images/simhei.ttf", 70)
 		.drawText(120, 550, name)
 		.stroke("#ffffff")
-		.font("../upload/Cresci_LP.ttf", 50)
+		.font("../images/Cresci_LP.ttf", 50)
 		.drawText(150, 620, "No.00001")
-		.draw(['image over 180,780 140,140 "http://10.22.149.110:8080/qrcode-demo/'+ id +'"'])
+		.draw(['image over 180,780 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.write("../upload/user"+id+".png", function (errs) {
 		  if (!errs) {
 
