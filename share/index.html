@@ -39,25 +39,37 @@ var SHARE_DATA=
 {
 	title	: "分享标题",
 	desc 	: "分享文案",
-	link 	: domain,
+	link 	: domain, // 这里在最后生成图片后 会发生变化，
 	imgUrl 	: "分享图片"
 }
-function setShareInfo() {
-	console.log(SHARE_DATA)
-	window.wechat_setting.friend = { 
-		 title	: SHARE_DATA.title,
-		 desc	: SHARE_DATA.desc,
-		 link	: SHARE_DATA.link,
-		 imgUrl	: SHARE_DATA.imgUrl 
-	};
-	window.wechat_setting.timeline = { 
-		 title	: SHARE_DATA.title,
-		 link	: SHARE_DATA.link,
-		 imgUrl	: SHARE_DATA.imgUrl 
-	};
-	return;
+function setShareInfo() 
+{
+	wx.onMenuShareTimeline({
+            title		: SHARE_DATA.title,
+            link		: SHARE_DATA.link,
+            imgUrl		: SHARE_DATA.imgUrl,
+            success		: function () {
+                //_hmt.push(['_trackEvent', 'buttons', 'click', 'ShareToMoments']);
+            },
+            cancel		: function () {
+            }
+        });
+	wx.onMenuShareAppMessage({
+		title		: SHARE_DATA.title,
+		desc		: SHARE_DATA.desc,
+		link		: SHARE_DATA.link,
+		imgUrl		:  SHARE_DATA.imgUrl,
+		type		: '',
+		dataUrl		: '',
+		success		: function () {
+			//_hmt.push(['_trackEvent', 'buttons', 'click', 'ShareToFriend']);
+		},
+		cancel: function () {
+		}
+	});
 }
-
+   
+$(document).ready(function(){ wx.ready(setShareInfo);})
 
 
 

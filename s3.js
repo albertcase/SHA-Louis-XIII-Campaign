@@ -1423,7 +1423,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 			$.ajax(
 			{
 				type		: "post",
-				url			: "/ajax/api/message?r="+Math.random(),
+				url			: domain+"ajax/api/message?r="+Math.random(),
 				dataType	: "json",
 				data:
 				{
@@ -1433,9 +1433,9 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 				success		: function (_d)
 				{
 					console.log(_d)
-					if(_d.code=="1")
+					if(_d.status=="1")
 					{
-						log("提交成功!")
+						log("保存成功!")
 						S.imgUrl=_d.url;
 						S.imgId=_d.id;
 						
