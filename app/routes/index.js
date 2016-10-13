@@ -108,6 +108,7 @@ router.post('/ajax/api/message', function(req, res, next) {
 		.font("../images/Cresci_LP.ttf", 50)
 		.drawText(150, 620, "No.00001")
 		.draw(['image over 180,780 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
+		.resize(600,600)
 		.write("../upload/user_"+id+".png", function (errs) {
 		  if (!errs) {
 
