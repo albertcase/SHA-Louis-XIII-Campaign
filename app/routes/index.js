@@ -119,7 +119,7 @@ router.post('/ajax/api/message', function(req, res, next) {
 		});	
 		
 		res.setHeader('Content-Type', 'application/json');
-		res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId, url: "http://louisxiii-cognac.samesamechina.com/upload/user_"+result[0].id+".png" }));	    
+		res.send(JSON.stringify({ status: 1, msg: "保存成功", "id": result.insertId}));	    
 	});
 	connection.end();
 	
