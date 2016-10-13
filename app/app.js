@@ -59,5 +59,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.get('/favicon.ico', function(req, res) {
+    res.send(200);
+});
+
 module.exports = app;
 
