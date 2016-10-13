@@ -129,7 +129,7 @@ router.get('/qrcode-demo/:id', function(req, res, next) {
 	var id = req.params.id;
 	var qr_image = require('qr-image');
 	//code
-	var temp_qrcode = qr_image.image('http://louisxiii-cognac.samesamechina.com/loadinfo/'+id);  
+	var temp_qrcode = qr_image.image('http://louisxiii-cognac.samesamechina.com/share/?id='+id);  
     res.type('png');  
     temp_qrcode.pipe(res); 
 });
