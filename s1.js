@@ -1375,8 +1375,8 @@ p.nominalBounds = new cjs.Rectangle(27.6,136.3,584.9,619.8);
 		var ageTemp = 0;
 		
 		this.touchArea.addEventListener("mousedown", f1.bind(this));
-		this.touchArea.addEventListener("pressmove", f3.bind(this));
-		this.touchArea.addEventListener("mouseup", f2.bind(this))
+		//this.touchArea.addEventListener("pressmove", f3.bind(this));
+		//this.touchArea.addEventListener("mouseup", f2.bind(this))
 		this.btn18.addEventListener("click", age18.bind(this));
 		this.popWin.addEventListener("click", popF.bind(this));
 		
@@ -1398,8 +1398,14 @@ p.nominalBounds = new cjs.Rectangle(27.6,136.3,584.9,619.8);
 			if (ageTemp == 0){
 				S.mcArr.visible = false;
 				S.mcTxt.visible = false;
+				S.mcCir.play();
+				S.btn18.visible = false;
+				/*
+				S.mcArr.visible = false;
+				S.mcTxt.visible = false;
 				yStart= event.touches[0].pageY;
-				console.log(yStart);
+				*/
+				//console.log(yStart);
 			}else {
 				S.popWin.visible =true;
 			}
@@ -1408,6 +1414,7 @@ p.nominalBounds = new cjs.Rectangle(27.6,136.3,584.9,619.8);
 		
 		function f2()
 		{
+			/*
 			yEnd= event.changedTouches[0].pageY;
 			
 			if (yEnd >= max){
@@ -1415,8 +1422,9 @@ p.nominalBounds = new cjs.Rectangle(27.6,136.3,584.9,619.8);
 			}else {
 				
 			}
+			*/
 			//changeSC();
-			console.log(yEnd);
+			//console.log(yEnd);
 		}
 		
 		function f3(){

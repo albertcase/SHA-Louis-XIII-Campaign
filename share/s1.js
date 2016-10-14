@@ -799,7 +799,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.btn = new lib.btn();
 	this.btn.setTransform(323,898.2,1,1,0,0,0,55,61.2);
 
-	this.na = new cjs.Text("", "26px 'Microsoft YaHei'", "#FFFFFF");
+	this.na = new cjs.Text("", "26px 'Microsoft YaHei'", "#602F08");
 	this.na.name = "na";
 	this.na.textAlign = "center";
 	this.na.lineHeight = 28;
@@ -814,21 +814,21 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.shape_1.graphics.bf(img.s_fh, null, new cjs.Matrix2D(1,0,0,1,-29.5,-7)).s().p("Ah7BFIAAiJID3AAIAACJg");
 	this.shape_1.setTransform(311.4,443.9);
 
-	this.info2 = new cjs.Text("", "26px 'Microsoft YaHei'", "#FFFFFF");
+	this.info2 = new cjs.Text("", "26px 'Microsoft YaHei'", "#602F08");
 	this.info2.name = "info2";
 	this.info2.textAlign = "center";
 	this.info2.lineHeight = 28;
 	this.info2.lineWidth = 534;
 	this.info2.setTransform(322,360.2);
 
-	this.info1 = new cjs.Text("", "26px 'Microsoft YaHei'", "#FFFFFF");
+	this.info1 = new cjs.Text("", "26px 'Microsoft YaHei'", "#602F08");
 	this.info1.name = "info1";
 	this.info1.textAlign = "center";
 	this.info1.lineHeight = 28;
 	this.info1.lineWidth = 534;
 	this.info1.setTransform(322,321.9);
 
-	this.info0 = new cjs.Text("", "26px 'Microsoft YaHei'", "#FFFFFF");
+	this.info0 = new cjs.Text("", "26px 'Microsoft YaHei'", "#602F08");
 	this.info0.name = "info0";
 	this.info0.textAlign = "center";
 	this.info0.lineHeight = 28;
@@ -842,7 +842,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.info0},{t:this.info1},{t:this.info2},{t:this.shape_1},{t:this.shape},{t:this.na},{t:this.btn}]}).wait(14));
 
 	// logTip
-	this.err = new cjs.Text("", "22px 'Microsoft YaHei'", "#FFFFFF");
+	this.err = new cjs.Text("", "22px 'Microsoft YaHei'", "#602F08");
 	this.err.name = "err";
 	this.err.textAlign = "center";
 	this.err.lineHeight = 24;

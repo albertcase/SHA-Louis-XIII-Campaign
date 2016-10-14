@@ -22,10 +22,10 @@ body{
             src: local('Cresci LP'), url('Cresci_LP.ttf') format('truetype');
         	}
 			
-::-webkit-input-placeholder {color: #E7E7E7;  /* WebKit browsers */ } 
-:-moz-placeholder {color: #E7E7E7;  /* Mozilla Firefox 4 to 18 */ } 
-::-moz-placeholder {color: #E7E7E7;  /* Mozilla Firefox 19+ */ } 
-:-ms-input-placeholder {color: #E7E7E7;  /* Internet Explorer 10+ */ } 
+::-webkit-input-placeholder {color: #602f08;  /* WebKit browsers */ } 
+:-moz-placeholder {color: #602f08;  /* Mozilla Firefox 4 to 18 */ } 
+::-moz-placeholder {color: #602f08;  /* Mozilla Firefox 19+ */ } 
+:-ms-input-placeholder {color: #602f08;  /* Internet Explorer 10+ */ } 
 </style>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="//wechatjs.curio.im/api/v1/js/2d0ec859-632f-45dc-aec8-e237154bd8c1/wechat.js"></script>
@@ -45,9 +45,10 @@ body{
 <!--以下内容不能有任何修改-->
 <canvas id="canv" width="640" height="1040" style="background-color:#000000; position:absolute;"></canvas>
 <div id="iptBox" class="abs" style="width:640px; height:620px; display:none; opacity:0">
-  	<textarea id="ipt" placeholder="输入试试" class="abs"  style="top:260px; left:70px; width:500px; height:160px; font-size:26px; line-height:50px;word-break:break-all;overflow:hidden; font-family:'Microsoft YaHei UI';  color:#FFF;  text-align:center;background-color:transparent; border-color:transparent;" >艺术的创作，需要先用心去捕捉，再从万物自然中攫取灵感，将各类元素进行凝
-练、重组，方能使其在岁月中历久弥香。</textarea> 
-   	<input id="na" placeholder="签下您的名字" class="abs" width="300" height="60" style="top: 470px; left: 170px; width: 300px; height: 60px; font-size:26px; font-family: 'Microsoft YaHei UI'; color: #FFF; text-align: center; background-color: transparent;border-color:transparent;"> 
+	<textarea id="tips" placeholder="" class="abs" readonly style="top:260px; left:70px; width:500px; height:160px; font-size:26px; line-height:50px;word-break:break-all;overflow:hidden; font-family:'Microsoft YaHei UI';  color:#602f08;  text-align:center;background-color:transparent; border-color:transparent;" >您可以删除我们为您准备的文字
+并写下此刻的感想</textarea> 
+  	<textarea id="ipt" placeholder="请输入您的感想" class="abs"  style=" display:none; opacity:0 ;top:260px; left:70px; width:500px; height:160px; font-size:26px; line-height:50px;word-break:break-all;overflow:hidden; font-family:'Microsoft YaHei UI';  color:#602f08;  text-align:center;background-color:transparent; border-color:transparent;" >路易十三之家，一场感官、情感、极致体验的非凡盛宴。</textarea> 
+   	<input id="na" placeholder="签下您的名字" class="abs" width="300" height="60" style="top: 470px; left: 170px; width: 300px; height: 60px; font-size:26px; font-family: 'Microsoft YaHei UI'; color: #602f08; text-align: center; background-color: transparent;border-color:transparent;"> 
 	<img id="ce" width="500" height="500" class="abs" style="top:262px; left:68px; opacity:.01; display:none">   
 </div>
 <!--以上内容不能有任何修改-->
@@ -57,15 +58,13 @@ var domain="http://louisxiii-cognac.samesamechina.com/"; //接口主域名末尾
 
 var SHARE_DATA=
 {
-	title	: "分享标题",
-	desc 	: "分享文案",
 	link 	: domain, // 这里在最后生成图片后 会发生变化，
-	imgUrl 	: "分享图片"
+	imgUrl 	: "http://louisxiii-cognac.samesamechina.com/share.jpg"
 }
 function setShareInfo() 
 {
 	wx.onMenuShareTimeline({
-            title		: SHARE_DATA.title,
+            title		: "一封来自路易十三之家的邀请函",
             link		: SHARE_DATA.link,
             imgUrl		: SHARE_DATA.imgUrl,
             success		: function () {
@@ -75,10 +74,10 @@ function setShareInfo()
             }
         });
 	wx.onMenuShareAppMessage({
-		title		: SHARE_DATA.title,
-		desc		: SHARE_DATA.desc,
+		title		: "路易十三之家的邀请函，你领取了吗？",
+		desc		: "亲临路易十三全球首家品牌店，开启身边的法式生活艺术。",
 		link		: SHARE_DATA.link,
-		imgUrl		:  SHARE_DATA.imgUrl,
+		imgUrl		: SHARE_DATA.imgUrl,
 		type		: '',
 		dataUrl		: '',
 		success		: function () {

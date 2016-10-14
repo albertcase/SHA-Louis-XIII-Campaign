@@ -554,6 +554,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,640,1040);
 		if (currentTemp <= 12){
 			currentTemp += 1;
 			this.parent.mainLine.play();
+			motionTemp = 1;
 		}
 		
 		this.gotoAndStop(0);
@@ -1560,6 +1561,10 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	this.frame_54 = function() {
 		this.stop();
 		this.parent.autoPlay.gotoAndPlay(1);
+		this.mc1_1.stop();
+		this.mc1_2.stop();
+		
+		this.parent.arrUp.visible = false;
 		
 		motionTemp = 0;
 	}
@@ -1568,6 +1573,8 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc1_1.play();
 		this.mc1_2.play();
+		
+		this.parent.arrUp.visible = true;
 		
 		motionTemp = 0;
 	}
@@ -1581,6 +1588,7 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.mc2_1.play();
 		this.mc2_2.play();
 		
+		
 		motionTemp = 0;
 	}
 	this.frame_105 = function() {
@@ -1590,6 +1598,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	this.frame_154 = function() {
 		this.stop();
 		this.parent.autoPlay.gotoAndPlay(1);
+		this.mc3_1.stop();
+		this.mc3_2.stop();
+		
 		
 		motionTemp = 0;
 	}
@@ -1598,6 +1609,7 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc3_1.play();
 		this.mc3_2.play();
+		
 		
 		motionTemp = 0;
 	}
@@ -1611,6 +1623,7 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.mc4_1.play();
 		this.mc4_2.play();
 		
+		
 		motionTemp = 0;
 	}
 	this.frame_205 = function() {
@@ -1620,6 +1633,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	this.frame_254 = function() {
 		this.stop();
 		this.parent.autoPlay.gotoAndPlay(1);
+		this.mc5_1.stop();
+		this.mc5_2.stop();
+		
 		
 		motionTemp = 0;
 	}
@@ -1628,6 +1644,7 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc5_1.play();
 		this.mc5_2.play();
+		
 		
 		motionTemp = 0;
 	}
@@ -1641,6 +1658,7 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.mc6_1.play();
 		this.mc6_2.play();
 		
+		
 		motionTemp = 0;
 	}
 	this.frame_305 = function() {
@@ -1650,6 +1668,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	this.frame_354 = function() {
 		this.stop();
 		this.parent.autoPlay.gotoAndPlay(1);
+		this.mc7_1.stop();
+		this.mc7_2.stop();
+		
 		
 		motionTemp = 0;
 	}
@@ -1658,6 +1679,7 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc7_1.play();
 		this.mc7_2.play();
+		
 		
 		motionTemp = 0;
 	}
@@ -1671,11 +1693,15 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 		this.mc8_1.play();
 		this.mc8_2.play();
 		
+		
 		motionTemp = 0;
 	}
 	this.frame_405 = function() {
 		this.mc8_1.stop();
 		this.mc8_2.stop();
+		
+		this.parent.arrUp.visible = false;
+		this.parent.arrDown.visible = false;
 	}
 	this.frame_434 = function() {
 		this.stop();
@@ -1960,7 +1986,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		function f1()
 		{
 			yStart= event.touches[0].pageY;
-			//console.log(yStart);
 		}
 		function f2()
 		{
@@ -1980,7 +2005,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 					outDown();
 					motionTemp = 1;
 				}
-				//console.log(currentTemp);
 			}
 		}
 		
@@ -1989,49 +2013,63 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 				currentTemp += 1;
 				S.mainLine.play();
 			}
+			console.log(currentTemp);
 		}
 		function outDown(){
-		
+			if (currentTemp >= 0){
 				if (currentTemp == 0){
-					//
+					motionTemp = 0;
+					S.autoPlay.gotoAndPlay(30);
 				}else if (currentTemp == 1){
 					i = 79;
 					t1=setInterval(prevFrame1,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 2){
 					i = 104;
 					t2=setInterval(prevFrame2,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 3){
 					i = 154;
 					t3=setInterval(prevFrame3,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 4){
 					i = 179;
 					t4=setInterval(prevFrame4,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 5){
 					i = 204;
 					t5=setInterval(prevFrame5,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 6){
 					i = 254;
 					t6=setInterval(prevFrame6,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 7){
 					i = 279;
 					t7=setInterval(prevFrame7,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 8){
 					i = 304;
 					t8=setInterval(prevFrame8,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 9){
 					i = 354;
 					t9=setInterval(prevFrame9,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 10){
 					i = 379;
 					t10=setInterval(prevFrame10,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 11){
 					i = 404;
 					t11=setInterval(prevFrame11,45);
+					currentTemp -= 1;
 				}else if (currentTemp == 12){
 					i = 434;
 					t12=setInterval(prevFrame12,45);
+					currentTemp -= 1;
 				}
-				currentTemp -= 1;
+			}
 			console.log(currentTemp);
 		}
 		function prevFrame1(){
@@ -2044,7 +2082,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 				
 				motionTemp = 0;
 				S.autoPlay.gotoAndPlay(1);
-				console.log("gg");
 				clearInterval(t1);
 			}
 		}
@@ -2075,8 +2112,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 			}
 		}function prevFrame4(){
 			if (i > 154){
-				S.mainLine.mc4_1.stop();
-				S.mainLine.mc4_2.stop();
+				S.mainLine.mc3_1.stop();
+				S.mainLine.mc3_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2088,8 +2125,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame5(){
 			if (i > 179){
-				S.mainLine.mc5_1.stop();
-				S.mainLine.mc5_2.stop();
+				S.mainLine.mc4_1.stop();
+				S.mainLine.mc4_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2101,8 +2138,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame6(){
 			if (i > 204){
-				S.mainLine.mc6_1.stop();
-				S.mainLine.mc6_2.stop();
+				S.mainLine.mc5_1.stop();
+				S.mainLine.mc5_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2114,8 +2151,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame7(){
 			if (i > 254){
-				S.mainLine.mc7_1.stop();
-				S.mainLine.mc7_2.stop();
+				S.mainLine.mc5_1.stop();
+				S.mainLine.mc5_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2127,8 +2164,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame8(){
 			if (i > 279){
-				S.mainLine.mc8_1.stop();
-				S.mainLine.mc8_2.stop();
+				S.mainLine.mc6_1.stop();
+				S.mainLine.mc6_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2140,8 +2177,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame9(){
 			if (i > 304){
-				S.mainLine.mc9_1.stop();
-				S.mainLine.mc9_2.stop();
+				S.mainLine.mc7_1.stop();
+				S.mainLine.mc7_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2153,8 +2190,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame10(){
 			if (i > 354){
-				S.mainLine.mc10_1.stop();
-				S.mainLine.mc10_2.stop();
+				S.mainLine.mc7_1.stop();
+				S.mainLine.mc7_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2166,8 +2203,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame11(){
 			if (i > 379){
-				S.mainLine.mc11_1.stop();
-				S.mainLine.mc11_2.stop();
+				S.mainLine.mc8_1.stop();
+				S.mainLine.mc8_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2179,8 +2216,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 		}
 		function prevFrame12(){
 			if (i > 404){
-				S.mainLine.mc12_1.stop();
-				S.mainLine.mc12_2.stop();
+				S.mainLine.mc8_1.stop();
+				S.mainLine.mc8_2.stop();
 				i=i-1;
 				S.mainLine.gotoAndStop(i);
 			}else {
@@ -2191,13 +2228,15 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 			}
 		}
 	}
-	this.frame_41 = function() {
+	this.frame_42 = function() {
+		this.stop();
+		
 		this.parent.gotoAndStop(1);
 		nextScene();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(40).call(this.frame_40).wait(1).call(this.frame_41).wait(59));
+	this.timeline.addTween(cjs.Tween.get(this).wait(40).call(this.frame_40).wait(2).call(this.frame_42).wait(58));
 
 	// blackMask
 	this.instance = new lib.blackMask("synched",0);
@@ -2225,6 +2264,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,59.2,45.6);
 
 	this.arrUp = new lib.arrUp();
 	this.arrUp.setTransform(319.5,49.2,1,1,0,0,0,19.2,22.4);
+	this.arrUp.visible = false;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.arrUp},{t:this.arrDown}]}).wait(100));
 
