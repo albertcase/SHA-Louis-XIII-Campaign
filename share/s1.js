@@ -690,7 +690,6 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	// timeline functions:
 	this.frame_0 = function() {
 		var S=this;
-		S.stop();
 		
 		var _id=getArgument("id"),uInfo,uName,imgUrl
 		if(_id=="")
@@ -791,9 +790,12 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 			},5000);
 		}
 	}
+	this.frame_13 = function() {
+		this.stop()
+	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(14));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(13).call(this.frame_13).wait(1));
 
 	// items
 	this.btn = new lib.btn();
@@ -804,7 +806,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.na.textAlign = "center";
 	this.na.lineHeight = 28;
 	this.na.lineWidth = 534;
-	this.na.setTransform(315,629.8);
+	this.na.setTransform(317,629.8);
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.bf(img.s_fh, null, new cjs.Matrix2D(1,0,0,1,-8.5,-7)).s().p("AhUBFIAAiJICpAAIAACJg");
@@ -853,7 +855,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 
 	// Layer 21    subBtn
 	this.btn_1 = new lib.Symbol15();
-	this.btn_1.setTransform(318.1,748.2,1,1,0,0,0,82,82);
+	this.btn_1.setTransform(318.1,588.2,1,1,0,0,0,82,82);
 	this.btn_1.alpha = 0;
 
 	this.timeline.addTween(cjs.Tween.get(this.btn_1).to({alpha:1},13).wait(1));
