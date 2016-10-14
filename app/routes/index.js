@@ -104,7 +104,7 @@ router.post('/ajax/api/message', function(req, res, next) {
 		.stroke("#ffffff")
 		.font("../images/"+ font +".ttf", 60)
 		.drawText(start, 560, name)
-		.draw(['image over 180,770 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
+		.draw(['image over 190,775 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.resize(600, 600, "!")
 		.autoOrient()
 		.write("../upload/user_"+id+".png", function (errs) {
