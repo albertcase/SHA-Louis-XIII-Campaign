@@ -94,17 +94,17 @@ router.post('/ajax/api/message', function(req, res, next) {
 	    var id = result.insertId;
 	    if (/.*[\u4e00-\u9fa5]+.*$/.test(name)) {
 			var font = 'simhei';
-			var start = 250-(name.length-1)*32;
+			var start = (1133 -name.length*64)/2;
 		} else {
 			var font = 'Cresci_LP';
-			var start = 250-(name.length-1)*20;
+			var start = (1133-name.length*40)/2;
 		}
 		console.log(font)
-	    gm('../images/tu_empty.jpg')
+	    gm('../images/tu_empty2.jpg')
 		.stroke("#ffffff")
 		.font("../images/"+ font +".ttf", 60)
-		.drawText(start, 560, name)
-		.draw(['image over 190,775 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
+		.drawText(start, 460, name)
+		//.draw(['image over 190,775 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.resize(600, 600, "!")
 		.autoOrient()
 		.write("../upload/user_"+id+".png", function (errs) {
