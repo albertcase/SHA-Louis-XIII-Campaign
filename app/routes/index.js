@@ -94,10 +94,10 @@ router.post('/ajax/api/message', function(req, res, next) {
 	    var id = result.insertId;
 	    if (/.*[\u4e00-\u9fa5]+.*$/.test(name)) {
 			var font = 'simhei';
-			var start = 250-(name.length-1)*32;
+			var start = (1133 -(name.length-1)*32)/2;
 		} else {
 			var font = 'Cresci_LP';
-			var start = 250-(name.length-1)*20;
+			var start = (1133-(name.length-1)*20)/2;
 		}
 		console.log(font)
 	    gm('../images/tu_empty.jpg')
