@@ -102,7 +102,7 @@ router.post('/ajax/api/message', function(req, res, next) {
 		console.log(font)
 	    gm('../images/tu_empty2.jpg')
 		.stroke("#ffffff")
-		.font("../images/"+ font +".ttf", 60)
+		.font("../images/"+ font +".ttf", 80)
 		.drawText(start, 460, name)
 		//.draw(['image over 190,775 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.resize(600, 600, "!")
