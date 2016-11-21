@@ -97,13 +97,13 @@ router.post('/ajax/api/message', function(req, res, next) {
 			var start = (1133 -(name.length-1)*32)/2;
 		} else {
 			var font = 'Cresci_LP';
-			var start = (1133-(name.length-1)*20)/2;
+			var start = (1133-(name.length-1)*25)/2;
 		}
 		console.log(font)
 	    gm('../images/tu_empty2.jpg')
 		.stroke("#ffffff")
 		.font("../images/"+ font +".ttf", 60)
-		.drawText(start, 560, name)
+		.drawText(start, 460, name)
 		//.draw(['image over 190,775 140,140 "http://louisxiii-cognac.samesamechina.com/qrcode-demo/'+ id +'"'])
 		.resize(600, 600, "!")
 		.autoOrient()
