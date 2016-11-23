@@ -11,8 +11,8 @@ lib.properties = {
 	manifest: [
 		{src:"i/c1.jpg", id:"c1"},
 		{src:"i/c10.png", id:"c10"},
-		{src:"i/s_btn.png", id:"s_btn"},
-		{src:"i/s_fh.png", id:"s_fh"}
+		{src:"i/dggs.png", id:"dggs"},
+		{src:"i/s_btn.png", id:"s_btn"}
 	]
 };
 
@@ -34,16 +34,16 @@ p.nominalBounds = new cjs.Rectangle(0,0,640,1044);
 p.nominalBounds = new cjs.Rectangle(0,0,164,164);
 
 
+(lib.dggs = function() {
+	this.initialize(img.dggs);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,391,110);
+
+
 (lib.s_btn = function() {
 	this.initialize(img.s_btn);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,272,318);
-
-
-(lib.s_fh = function() {
-	this.initialize(img.s_fh);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,42,14);
 
 
 (lib.Symbol18 = function() {
@@ -1054,15 +1054,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.na.textAlign = "center";
 	this.na.lineHeight = 28;
 	this.na.lineWidth = 534;
-	this.na.setTransform(317,629.8);
-
-	this.shape = new cjs.Shape();
-	this.shape.graphics.bf(img.s_fh, null, new cjs.Matrix2D(1,0,0,1,-8.5,-7)).s().p("AhUBFIAAiJICpAAIAACJg");
-	this.shape.setTransform(319.3,248.9);
-
-	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.bf(img.s_fh, null, new cjs.Matrix2D(1,0,0,1,-29.5,-7)).s().p("Ah7BFIAAiJID3AAIAACJg");
-	this.shape_1.setTransform(311.4,443.9);
+	this.na.setTransform(317,487.8);
 
 	this.info2 = new cjs.Text("", "26px 'Microsoft YaHei'", "#602F08");
 	this.info2.name = "info2";
@@ -1085,11 +1077,10 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.info0.lineWidth = 534;
 	this.info0.setTransform(322,283.6);
 
-	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.bf(img.s_btn, null, new cjs.Matrix2D(0.853,0,0,0.853,-116,-57.9)).s().p("AyHJDIAAyFMAkPAAAIAASFg");
-	this.shape_2.setTransform(321.9,746);
+	this.instance = new lib.dggs();
+	this.instance.setTransform(122,537.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.info0},{t:this.info1},{t:this.info2},{t:this.shape_1},{t:this.shape},{t:this.na},{t:this.btn}]}).wait(14));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.info0},{t:this.info1},{t:this.info2},{t:this.na},{t:this.btn}]}).wait(14));
 
 	// logTip
 	this.err = new cjs.Text("", "22px 'Microsoft YaHei'", "#602F08");
@@ -1097,7 +1088,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.err.textAlign = "center";
 	this.err.lineHeight = 24;
 	this.err.lineWidth = 567;
-	this.err.setTransform(322.4,460);
+	this.err.setTransform(322.4,420);
 
 	this.timeline.addTween(cjs.Tween.get(this.err).wait(14));
 
@@ -1109,15 +1100,15 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.timeline.addTween(cjs.Tween.get(this.btn_1).to({alpha:1},13).wait(1));
 
 	// blockEff
-	this.instance = new lib.Symbol6();
-	this.instance.setTransform(320.5,494.9,1,1,0,0,0,295.2,444.4);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14));
-
-	// Layer 1
-	this.instance_1 = new lib.c1();
+	this.instance_1 = new lib.Symbol6();
+	this.instance_1.setTransform(320.5,494.9,1,1,0,0,0,295.2,444.4);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(14));
+
+	// Layer 1
+	this.instance_2 = new lib.c1();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(14));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,-110.8,640,1154.9);
