@@ -321,10 +321,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,640,1040);
 p.nominalBounds = new cjs.Rectangle(0,0,611,107);
 
 
-(lib.ed_mskG = function() {
-	this.initialize(img.ed_mskG);
+(lib.ed_mskG2 = function() {
+	this.initialize(img.ed_mskG2);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,640,651);
+p.nominalBounds = new cjs.Rectangle(0,0,750,729);
 
 
 (lib.fxff = function() {
@@ -742,12 +742,13 @@ p.nominalBounds = new cjs.Rectangle(0,0,19.5,19.5);
 	this.initialize(mode,startPosition,loop,{});
 
 	// 图层 1
-	this.instance = new lib.ed_mskG();
+	this.instance = new lib.ed_mskG2();
 	this.instance.parent = this;
+	this.instance.setTransform(0,0,0.853,0.853);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.msk, new cjs.Rectangle(0,0,640,651), null);
+}).prototype = getMCSymbolPrototype(lib.msk, new cjs.Rectangle(0,0,640,622.1), null);
 
 
 (lib.lineBg = function(mode,startPosition,loop) {
@@ -1558,10 +1559,12 @@ p.nominalBounds = new cjs.Rectangle(63.1,0,313.1,22.5);
 			if(img.getBounds())
 			{
 				clearInterval(inter)
-				img.scaleX=500/img.getBounds().width
-				img.scaleY=500/img.getBounds().height
+				img.scaleX=510/img.getBounds().width
+				img.scaleY=510/img.getBounds().height
 				S.addChildAt(img,0)
 				S.msk.alpha=1;
+				img.x=-7.5
+				img.y=-24;
 			}
 		},1000/60)
 		
@@ -1578,7 +1581,7 @@ p.nominalBounds = new cjs.Rectangle(63.1,0,313.1,22.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.msk).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib._img, new cjs.Rectangle(-70.9,-69,640,651), null);
+}).prototype = getMCSymbolPrototype(lib._img, new cjs.Rectangle(-70.9,-69,640,622.1), null);
 
 
 (lib.blackOut = function(mode,startPosition,loop) {
@@ -1877,6 +1880,8 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		
 		this.stop();
 		var S=this
+		S.fxBox.visible=false;
+		
 		S.fx.on("mousedown",function(e)
 		{
 			S.fxBox.visible=true;
@@ -1932,25 +1937,6 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.ruleBox).wait(140).to({_off:false},0).wait(11));
 
-	// success
-	this.fx = new lib.元件1();
-	this.fx.parent = this;
-	this.fx.setTransform(331.6,866.9,1,1,0,0,0,305.5,53.5);
-
-	this.instance = new lib.rule_1();
-	this.instance.parent = this;
-	this.instance.setTransform(320,969.9,1,1,0,0,0,49,14.5);
-
-	this.instance_1 = new lib._img();
-	this.instance_1.parent = this;
-	this.instance_1.setTransform(96,262,0.906,0.906);
-
-	this.instance_2 = new lib.cmgf();
-	this.instance_2.parent = this;
-	this.instance_2.setTransform(174,114);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.fx}]},140).wait(11));
-
 	// logTip
 	this.err = new cjs.Text("", "22px 'Arial'", "#FFFFFF");
 	this.err.name = "err";
@@ -1964,13 +1950,32 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.timeline.addTween(cjs.Tween.get(this.err).wait(139).to({_off:false},0).to({_off:true},1).wait(11));
 
 	// line
-	this.instance_3 = new lib.lineBg();
-	this.instance_3.parent = this;
-	this.instance_3.setTransform(321.5,414,1,1,0,0,0,229.5,112);
-	this.instance_3.alpha = 0;
-	this.instance_3._off = true;
+	this.instance = new lib.lineBg();
+	this.instance.parent = this;
+	this.instance.setTransform(321.5,414,1,1,0,0,0,229.5,112);
+	this.instance.alpha = 0;
+	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(126).to({_off:false},0).to({alpha:1},13).to({_off:true},1).wait(11));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(126).to({_off:false},0).to({alpha:1},13).to({_off:true},1).wait(11));
+
+	// success
+	this.fx = new lib.元件1();
+	this.fx.parent = this;
+	this.fx.setTransform(331.6,866.9,1,1,0,0,0,305.5,53.5);
+
+	this.instance_1 = new lib.cmgf();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(174,114);
+
+	this.instance_2 = new lib.rule_1();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(320,969.9,1,1,0,0,0,49,14.5);
+
+	this.instance_3 = new lib._img();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(71,259.1);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.fx}]},140).wait(11));
 
 	//  subBtn
 	this.btn = new lib.Symbol15();
@@ -2164,7 +2169,7 @@ lib.properties = {
 		{src:"images/Comp3_00034.png", id:"Comp3_00034"},
 		{src:"images/Comp3_00035.png", id:"Comp3_00035"},
 		{src:"images/ed_bc.png", id:"ed_bc"},
-		{src:"images/ed_mskG.png", id:"ed_mskG"},
+		{src:"images/ed_mskG2.png", id:"ed_mskG2"},
 		{src:"images/fxff.png", id:"fxff"},
 		{src:"images/line.png", id:"line"},
 		{src:"images/ng26.png", id:"ng26"},
