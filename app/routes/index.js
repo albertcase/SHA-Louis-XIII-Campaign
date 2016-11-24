@@ -98,8 +98,9 @@ router.post('/ajax/api/message', function(req, res, next) {
 		} else {
 			var font = 'Cresci_LP';
 			var m=(name.toLowerCase().split('w')).length-1;
+			var o=(name.toLowerCase().split('m')).length-1;
 			var n=(name.toLowerCase().split('i')).length-1;
-			var start = (1133-(name.length-n-m)*50 - n*25 - m*80)/2;
+			var start = (1133-(name.length-n-m-o)*50 - n*25 - m*80 - o*80)/2;
 		}
 		//console.log(font)
 
