@@ -52,6 +52,22 @@ body{
 <!--以上内容不能有任何修改-->
 </body>
 <script>
+if(IsPC())
+{
+	window.location.href="http://louisxiii-cognac.samesamechina.com/weibo.html"
+}
+
+function IsPC()  
+{  
+	   var userAgentInfo = navigator.userAgent;  
+	   var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+	   var flag = true;  
+	   for (var v = 0; v < Agents.length; v++) {  
+		   if (userAgentInfo.indexOf(Agents[v]) > -1) { flag = false; break; }  
+	   }  
+	   return flag;  
+}
+	
 var domain="http://louisxiii-cognac.samesamechina.com/"; //接口主域名末尾必须带 /  ;提交信息\获取信息\分享URL,接口均使用此
 
 var SHARE_DATA=
@@ -62,7 +78,7 @@ var SHARE_DATA=
 function setShareInfo() 
 {
 	wx.onMenuShareTimeline({
-            title		: "一封来自路易十三之家的邀请函",
+            title		: "你想了解我的下一段征程吗？",
             link		: SHARE_DATA.link,
             imgUrl		: SHARE_DATA.imgUrl,
             success		: function () {
@@ -73,7 +89,7 @@ function setShareInfo()
         });
 	wx.onMenuShareAppMessage({
 		title		: "路易十三之家的邀请函，你领取了吗？",
-		desc		: "亲临路易十三全球首家品牌店，开启身边的法式生活艺术。",
+		desc		: "路易十三全球首家品牌店，开启身边的法式生活艺术。",
 		link		: SHARE_DATA.link,
 		imgUrl		: SHARE_DATA.imgUrl,
 		type		: '',
@@ -96,7 +112,7 @@ $(document).ready(function(){ wx.ready(setShareInfo);})
 
 var currentTemp = 0, motionTemp = 0;
 var canvas,stage,ld,exportRoot=[],ldMc,S=this,INFO
-var ldPage=0,onPage=3,totalPage=4;
+var ldPage=0,onPage=1,totalPage=4;
 
 
 function resizeF()
