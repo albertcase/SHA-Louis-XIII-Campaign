@@ -97,9 +97,11 @@ router.post('/ajax/api/message', function(req, res, next) {
 			var start = (1133 -name.length*80)/2;
 		} else {
 			var font = 'Cresci_LP';
-			var start = (1133-name.length*55)/2;
+			var n=(name.toLowerCase().split('i')).length-1;
+			var start = (1133-(name.length-n)*55 - n*30)/2;
 		}
-		console.log(font)
+		//console.log(font)
+
 	    gm('../images/tu_empty2.jpg')
 		.stroke("#ffffff")
 		.font("../images/"+ font +".ttf", 80)
