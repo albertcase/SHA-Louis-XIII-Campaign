@@ -189,10 +189,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,671,523);
 p.nominalBounds = new cjs.Rectangle(0,0,671,523);
 
 
-(lib.ng20 = function() {
-	this.initialize(img.ng20);
+(lib.ng20_2 = function() {
+	this.initialize(img.ng20_2);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,322,156);
+p.nominalBounds = new cjs.Rectangle(0,0,347,156);
 
 
 (lib.ng21 = function() {
@@ -363,15 +363,15 @@ p.nominalBounds = new cjs.Rectangle(0,0,740,609);
 (lib.Symbol46 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Layer 2
-	this.instance = new lib.ng20();
+	// Layer 1
+	this.instance = new lib.ng20_2();
 	this.instance.parent = this;
-	this.instance.setTransform(-9,31);
+	this.instance.setTransform(-26.5,31);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-9,31,322,156);
+p.nominalBounds = new cjs.Rectangle(-26.5,31,347,156);
 
 
 (lib.Symbol45 = function(mode,startPosition,loop) {
@@ -2075,7 +2075,7 @@ lib.properties = {
 		{src:"images/ng17.png", id:"ng17"},
 		{src:"images/ng18.jpg", id:"ng18"},
 		{src:"images/ng19.jpg", id:"ng19"},
-		{src:"images/ng20.png", id:"ng20"},
+		{src:"images/ng20_2.png", id:"ng20_2"},
 		{src:"images/ng21.png", id:"ng21"},
 		{src:"images/ng22.png", id:"ng22"},
 		{src:"images/ng23.png", id:"ng23"},
