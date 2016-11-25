@@ -1167,7 +1167,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.na.lineHeight = 28;
 	this.na.lineWidth = 534;
 	this.na.parent = this;
-	this.na.setTransform(319,489.8);
+	this.na.setTransform(319,452.8);
 
 	this.info2 = new cjs.Text("", "26px 'Arial'", "#602F08");
 	this.info2.name = "info2";
@@ -1175,7 +1175,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.info2.lineHeight = 28;
 	this.info2.lineWidth = 534;
 	this.info2.parent = this;
-	this.info2.setTransform(324,362.2);
+	this.info2.setTransform(324,399.2);
 
 	this.info1 = new cjs.Text("", "26px 'Arial'", "#602F08");
 	this.info1.name = "info1";
@@ -1183,7 +1183,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.info1.lineHeight = 28;
 	this.info1.lineWidth = 534;
 	this.info1.parent = this;
-	this.info1.setTransform(324,323.9);
+	this.info1.setTransform(324,360.9);
 
 	this.info0 = new cjs.Text("", "26px 'Arial'", "#602F08");
 	this.info0.name = "info0";
@@ -1191,11 +1191,11 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.info0.lineHeight = 28;
 	this.info0.lineWidth = 534;
 	this.info0.parent = this;
-	this.info0.setTransform(324,285.6);
+	this.info0.setTransform(324,322.6);
 
 	this.instance = new lib.dggs();
 	this.instance.parent = this;
-	this.instance.setTransform(122,537.7);
+	this.instance.setTransform(122,508);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.info0},{t:this.info1},{t:this.info2},{t:this.na},{t:this.btn}]}).wait(14));
 
@@ -1206,7 +1206,7 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.err.lineHeight = 24;
 	this.err.lineWidth = 567;
 	this.err.parent = this;
-	this.err.setTransform(324.4,422);
+	this.err.setTransform(324.4,798.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.err).wait(14));
 
