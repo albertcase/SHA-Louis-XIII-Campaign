@@ -1260,6 +1260,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	// timeline functions:
 	this.frame_54 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP1_0]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc1_1.stop();
 		this.mc1_2.stop();
@@ -1270,6 +1273,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_79 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP1_1]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc1_1.play();
 		this.mc1_2.play();
@@ -1284,6 +1290,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_104 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP1_2]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc2_1.play();
 		this.mc2_2.play();
@@ -1297,6 +1306,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_154 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP2_0]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc3_1.stop();
 		this.mc3_2.stop();
@@ -1306,6 +1318,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_179 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP2_1]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc3_1.play();
 		this.mc3_2.play();
@@ -1319,6 +1334,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_204 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP2_2]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc4_1.play();
 		this.mc4_2.play();
@@ -1332,6 +1350,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_254 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP3_0]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc5_1.stop();
 		this.mc5_2.stop();
@@ -1341,6 +1362,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_279 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP3_1]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc5_1.play();
 		this.mc5_2.play();
@@ -1354,6 +1378,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_304 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP3_2]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc6_1.play();
 		this.mc6_2.play();
@@ -1367,6 +1394,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_354 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP4_0]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc7_1.stop();
 		this.mc7_2.stop();
@@ -1376,6 +1406,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_379 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP4_1]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc7_1.play();
 		this.mc7_2.play();
@@ -1389,6 +1422,9 @@ p.nominalBounds = new cjs.Rectangle(-1.4,-1.4,22.8,12.9);
 	}
 	this.frame_404 = function() {
 		this.stop();
+		
+		_hmt.push(['_trackPageview', /neiyeP4_2]);
+		
 		this.parent.autoPlay.gotoAndPlay(1);
 		this.mc8_1.play();
 		this.mc8_2.play();
