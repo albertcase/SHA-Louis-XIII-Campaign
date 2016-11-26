@@ -5,6 +5,32 @@
 <script language="javascript">
 	document.write('<meta name="viewport" content="width=640, minimum-scale = '+window.screen.width/640+', maximum-scale = '+window.screen.width/640+', target-densitydpi=device-dpi">');
 </script>
+<script>
+if(IsPC())
+{
+	window.location.href="http://louisxiii-cognac.samesamechina.com/weibo.html"
+}
+
+function IsPC()  
+{  
+	   var userAgentInfo = navigator.userAgent;  
+	   var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+	   var flag = true;  
+	   for (var v = 0; v < Agents.length; v++) {  
+		   if (userAgentInfo.indexOf(Agents[v]) > -1) { flag = false; break; }  
+	   }  
+	   return flag;  
+}
+</script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+  		var hm = document.createElement("script");
+  		hm.src = "https://hm.baidu.com/hm.js?84d0a19562aac3e87348460c0cc9e4de";
+  		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
 
 <title>开启世纪传承</title>
 <style>
@@ -52,21 +78,7 @@ body{
 <!--以上内容不能有任何修改-->
 </body>
 <script>
-if(IsPC())
-{
-	window.location.href="http://louisxiii-cognac.samesamechina.com/weibo.html"
-}
 
-function IsPC()  
-{  
-	   var userAgentInfo = navigator.userAgent;  
-	   var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
-	   var flag = true;  
-	   for (var v = 0; v < Agents.length; v++) {  
-		   if (userAgentInfo.indexOf(Agents[v]) > -1) { flag = false; break; }  
-	   }  
-	   return flag;  
-}
 	
 var domain="http://louisxiii-cognac.samesamechina.com/"; //接口主域名末尾必须带 /  ;提交信息\获取信息\分享URL,接口均使用此
 
@@ -103,12 +115,6 @@ function setShareInfo()
 }
    
 $(document).ready(function(){ wx.ready(setShareInfo);})
-
-
-
-
-
-
 
 var currentTemp = 0, motionTemp = 0;
 var canvas,stage,ld,exportRoot=[],ldMc,S=this,INFO

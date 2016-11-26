@@ -1682,6 +1682,8 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 
 	// timeline functions:
 	this.frame_110 = function() {
+		_hmt.push(['_trackPageview', '/zhengcheng']);
+		
 		var s = this;
 		this.arrow = 0
 		
@@ -1775,6 +1777,9 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	}
 	this.frame_139 = function() {
 		var S=this
+		
+		_hmt.push(['_trackPageview', '/tianxie']);
+		
 		S.stop();
 		
 		S.imgUrl="img/test.jpg"
@@ -1793,6 +1798,8 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		
 		function subF()
 		{
+			_hmt.push(['_trackEvent', "dianJi", "tiJiao"]);
+			
 			var _info=""
 			console.log(INFO.message)
 			
@@ -1808,7 +1815,6 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 			
 			log("保存中...")
 			dsSubBtn()
-			
 			
 			//====admin
 			//$("#ipt,#na").css("display","none")
@@ -1875,6 +1881,8 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		}
 	}
 	this.frame_140 = function() {
+		_hmt.push(['_trackPageview', '/shengcheng']);
+		
 		window.removeEventListener("touchstart", this.f1);
 		window.removeEventListener("touchend",  this.f2)
 		
@@ -1885,11 +1893,13 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		S.fx.on("mousedown",function(e)
 		{
 			S.fxBox.visible=true;
+			$("#ce").css("display","none")
 		})
 		
 		S.fxBox.on("mousedown",function(e)
 		{
 			S.fxBox.visible=false;
+			$("#ce").css("display","block")
 		})
 	}
 
@@ -2111,7 +2121,6 @@ p.nominalBounds = null;
 	// mc
 	this.instance = new lib.main();
 	this.instance.parent = this;
-	this.instance.setTransform(320,520,1,1,0,0,0,320,520);
 	this.instance._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).wait(1));
