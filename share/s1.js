@@ -1061,8 +1061,12 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		
 		S.btn.on("mousedown",function(e)
 		{
-			e.remove();
-			window.location.href=domain;
+			_hmt.push(['_trackEvent', "dianJi","liJiKaiShi"]);
+			setTimeout(function()
+			{
+				e.remove();
+				window.location.href=domain;
+			},200)
 		})
 		
 		function getInfo()
@@ -1150,7 +1154,8 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		}
 	}
 	this.frame_13 = function() {
-		this.stop()
+		this.stop()；
+		_hmt.push(['_trackPageview', /share]);
 	}
 
 	// actions tween:
