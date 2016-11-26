@@ -5,6 +5,15 @@
 <script language="javascript">
 	document.write('<meta name="viewport" content="width=640, minimum-scale = '+window.screen.width/640+', maximum-scale = '+window.screen.width/640+', target-densitydpi=device-dpi">');
 </script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+  		var hm = document.createElement("script");
+  		hm.src = "https://hm.baidu.com/hm.js?84d0a19562aac3e87348460c0cc9e4de";
+  		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
 
 <title>开启世纪传承</title>
 <style>
@@ -43,7 +52,7 @@ var SHARE_DATA=
 function setShareInfo() 
 {
 	wx.onMenuShareTimeline({
-            title		: "你想了解我的下一段征程吗？",
+            title		: "一封来自路易十三之家的邀请函",
             link		: SHARE_DATA.link,
             imgUrl		: SHARE_DATA.imgUrl,
             success		: function () {
@@ -54,7 +63,7 @@ function setShareInfo()
         });
 	wx.onMenuShareAppMessage({
 		title		: "路易十三之家的邀请函，你领取了吗？",
-		desc		: "路易十三全球首家品牌店，开启身边的法式生活艺术。",
+		desc		: "亲临路易十三全球首家品牌店，开启身边的法式生活艺术。",
 		link		: SHARE_DATA.link,
 		imgUrl		: SHARE_DATA.imgUrl,
 		type		: '',
