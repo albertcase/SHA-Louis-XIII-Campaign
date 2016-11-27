@@ -1682,7 +1682,11 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 
 	// timeline functions:
 	this.frame_110 = function() {
+<<<<<<< HEAD
 		_hmt.push(['_trackPageview', /zhengcheng]);
+=======
+		_hmt.push(['_trackPageview', '/zhengcheng']);
+>>>>>>> a741dd44c5a9cdceb12e99054f96bb8f9ee81ae8
 		
 		var s = this;
 		this.arrow = 0
@@ -1778,7 +1782,11 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 	this.frame_139 = function() {
 		var S=this
 		
+<<<<<<< HEAD
 		_hmt.push(['_trackPageview', /tianxie]);
+=======
+		_hmt.push(['_trackPageview', '/tianxie']);
+>>>>>>> a741dd44c5a9cdceb12e99054f96bb8f9ee81ae8
 		
 		S.stop();
 		
@@ -1881,7 +1889,11 @@ p.nominalBounds = new cjs.Rectangle(71.8,21.5,313.1,22.5);
 		}
 	}
 	this.frame_140 = function() {
+<<<<<<< HEAD
 		_hmt.push(['_trackPageview', /shengcheng]);
+=======
+		_hmt.push(['_trackPageview', '/shengcheng']);
+>>>>>>> a741dd44c5a9cdceb12e99054f96bb8f9ee81ae8
 		
 		window.removeEventListener("touchstart", this.f1);
 		window.removeEventListener("touchend",  this.f2)
