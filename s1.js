@@ -1442,11 +1442,7 @@ p.nominalBounds = new cjs.Rectangle(27.6,136.3,584.9,619.8);
 	this.frame_69 = function() {
 		this.stop();
 		
-<<<<<<< HEAD
-		_hmt.push(['_trackPageview', /shouye]);
-=======
 		_hmt.push(['_trackPageview', '/shouye']);
->>>>>>> a741dd44c5a9cdceb12e99054f96bb8f9ee81ae8
 		
 		var S = this;
 		
